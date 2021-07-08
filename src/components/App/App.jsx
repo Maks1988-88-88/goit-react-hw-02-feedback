@@ -1,12 +1,11 @@
-// import { object } from 'prop-types';
 import React, { Component } from 'react';
 import Section from 'components/Section/Section';
 import Statistics from 'components/Statistics/Statistics';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Notification from 'components/Notification/Notification';
+import s from 'components/App/App.module.css';
 
 
-import './App.css';
 
 export default class App extends Component {
   state = {
@@ -43,7 +42,7 @@ export default class App extends Component {
     console.log(value);
 
     return (
-      <div>
+      <div className={s.wrapper}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={stateName}
